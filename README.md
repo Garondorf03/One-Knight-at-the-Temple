@@ -7,7 +7,8 @@
     <li>
       <a href="#about-my-game-demo">About My Game Demot</a>
     </li>
-    <li><a href="#how-it-works-/-how-to-play">How It Works / How To Play</a></li>
+    <li><a href="#how-to-download-the-demo">How To Download The Demo</a></li>
+    <li><a href="#how-to-play">How To Play</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -29,8 +30,14 @@ of my development. I usually work on this a couple times every few months, just 
 <img src="readmeimages/idea.PNG" alt="Main Menu" width="350" height="500" >
 
 
-<!-- HOW IT WORKS/HOW TO PLAY -->
-## How It Works / How To Play
+<!-- HOW TO DOWNLOAD THE DEMO -->
+## How To Download The Demo
+
+Just simply download and run the .exe file called playDemo.exe inside the playDemo folder.
+
+
+<!-- HOW TO PLAY -->
+## How To Play
 
 This game takes great inspiration from Castle Crashers but with a more modern style. The mechanics are simple, W A S D to move, SPACE to jump and E or Left Click to attack. The game
 entails running through a linear dunegon, jumping over obstacles, killing enemies and opening chests for loot. The goal is to reach the end of each level. The levels will get more tough as they go along
