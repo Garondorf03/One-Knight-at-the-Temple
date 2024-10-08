@@ -35,7 +35,9 @@ WELCOME TO MY GAME DEMO FOR: 1 KNIGHT AT THE TEMPLE
 Earlier this year around May/June time, I decided to pick up game development again. I first explored game development 2 years ago experimenting with the Unity game engine,
 but found it a bit challenging getting used to the UI and how things worked. Thankfully I found the Godot game Engine, which is user friendly and very fun to use! I started thinking
 of game ideas and one of them was a 2D dungeon based action combat game. This demo is no where near finished, but I decided to upload the project to my GitHub to track the process 
-of my development. I usually work on this a couple times every few months, jsut whenever I feel like it and have some free time!
+of my development. I usually work on this a couple times every few months, just whenever I feel like it and have some free time!
+
+<img src="readmeimages/idea.PNG" alt="Main Menu" width="500" height="300" >
 
 
 <!-- HOW IT WORKS/HOW TO PLAY -->
