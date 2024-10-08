@@ -1,0 +1,127 @@
+[gd_scene load_steps=15 format=3 uid="uid://c1lqn7o1d0vh8"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_p6m1w"]
+[ext_resource type="Texture2D" uid="uid://bcn1fhxh4juyg" path="res://assets/sprites/Slimes/Slime_Medium_Blue.png" id="2_10asj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thutj"]
+atlas = ExtResource("2_10asj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fdv0"]
+atlas = ExtResource("2_10asj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmavb"]
+atlas = ExtResource("2_10asj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os1nh"]
+atlas = ExtResource("2_10asj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbbb2"]
+atlas = ExtResource("2_10asj")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ui1v"]
+atlas = ExtResource("2_10asj")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uoffa"]
+atlas = ExtResource("2_10asj")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlrsk"]
+atlas = ExtResource("2_10asj")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmxxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thutj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fdv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmavb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_os1nh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbbb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ui1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uoffa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlrsk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m62qj"]
+size = Vector2(12.25, 4.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ehemh"]
+radius = 99.0202
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gk5bl"]
+radius = 13.0384
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_p6m1w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemies"]]
+position = Vector2(10.24, -11.75)
+scale = Vector2(1.1725, 1.20313)
+sprite_frames = SubResource("SpriteFrames_dmxxp")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["enemies"]]
+position = Vector2(10.125, -8)
+shape = SubResource("RectangleShape2D_m62qj")
+
+[node name="DetectionArea" type="Area2D" parent="." groups=["enemies"]]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" groups=["enemies"]]
+position = Vector2(10, -12)
+shape = SubResource("CircleShape2D_ehemh")
+
+[node name="enemyHitbox" type="Area2D" parent="." groups=["enemies"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyHitbox" groups=["enemies"]]
+position = Vector2(10, -13)
+shape = SubResource("CircleShape2D_gk5bl")
+
+[node name="takeDamageCooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(0.14902, 1, 0, 1)
+offset_top = -26.0
+offset_right = 63.0
+offset_bottom = -4.0
+scale = Vector2(0.326478, 0.199999)
+show_percentage = false
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="enemyHitbox" to="." method="_on_enemy_hitbox_body_entered"]
+[connection signal="body_exited" from="enemyHitbox" to="." method="_on_enemy_hitbox_body_exited"]
+[connection signal="timeout" from="takeDamageCooldown" to="." method="_on_take_damage_cooldown_timeout"]

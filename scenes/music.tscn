@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://di8yxj7c5368f"]
+
+[ext_resource type="AudioStream" uid="uid://dmufurxwuc4u1" path="res://assets/music/Pet Shop Boys - The Lost Room (Official Instrumental) (320 kbps).mp3" id="1_2jny4"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+position = Vector2(1161, 647)
+stream = ExtResource("1_2jny4")
+autoplay = true
+bus = &"Music"
