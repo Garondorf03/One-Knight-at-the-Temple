@@ -33,7 +33,7 @@ of my development. I usually work on this a couple times every few months, just 
 <!-- HOW TO DOWNLOAD THE DEMO -->
 ## How To Download The Demo
 
-Just simply download and run the .exe file called playDemo.exe inside the playDemo folder.
+Just simply download and the .exe file called playDemo.exe, and the .pck file called playDemo.pck inside the playDemo folder. Then run the executable!
 
 
 <!-- HOW TO PLAY -->
