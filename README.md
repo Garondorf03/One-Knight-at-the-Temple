@@ -5,10 +5,7 @@
 <details>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
+      <a href="#about-my-game-demo">About My Game Demot</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -28,31 +25,17 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- ABOUT MY GAME DEMO -->
+## About My Game Demo
 
-<img src="readmeimages/mainmenu.PNG" alt="Main Menu" width="500" height="300">
+<img src="readmeimages/mainmenu.PNG" alt="Main Menu" width="500" height="300" >
 <img src="readmeimages/gameplay.PNG" alt="Gameplay" width="500" height="300">
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+WELCOME TO MY GAME DEMO FOR: 1 KNIGHT AT THE TEMPLE 
+Earlier this year around May/June time, I decided to pick up game development again. I first explored game development 2 years ago experimenting with the Unity game engine,
+but found it a bit challenging getting used to the UI and how things worked. Thankfully I found the Godot game Engine, which is user friendly and very fun to use! I started thinking
+of game ideas and one of them was a 2D dungeon based action combat game. This demo is no where near finished, but I decided to upload the project to my GitHub to track the process 
+of my development. I usually work on this a couple times every few months, jsut whenever I feel like it and have some free time!
 
 
 <!-- GETTING STARTED -->
