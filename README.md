@@ -31,7 +31,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 <img src="readmeimages/mainmenu.PNG" alt="Main Menu" width="500" height="300">
 <img src="readmeimages/gameplay.PNG" alt="Gameplay" width="500" height="300">
 
